@@ -30,7 +30,7 @@ By default, all pages will appear as top level pages in the main nav unless a pa
 
 To specify a page order, you can use the `nav_order` parameter in your pages' YAML front matter.
 
-#### Example
+### Example
 {: .no_toc }
 
 ```yaml
@@ -47,7 +47,7 @@ The parameter values can be numbers (integers, floats) and/or strings. When you 
 
 By default, all Capital letters come before all lowercase letters; you can add `nav_sort: case_insensitive` in the configuration file to ignore the case. Enclosing strings in quotation marks is optional.
 
-> *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated. 
+> *Note for users of previous versions:* `nav_sort: case_insensitive` previously affected the ordering of numerical `nav_order` parameters: e.g., `10` came before `2`. Also, all pages with explicit `nav_order` parameters previously came before all pages with default parameters. Both were potentially confusing, and they have now been eliminated.
 
 ---
 
@@ -68,7 +68,7 @@ nav_exclude: true
 
 The `nav_exclude` parameter does not affect the [auto-generating list of child pages](#auto-generating-table-of-contents), which you can use to access pages excluded from the main navigation.
 
-Pages with no `title` are automatically excluded from the navigation. 
+Pages with no `title` are automatically excluded from the navigation.
 
 ---
 
@@ -104,7 +104,7 @@ Sometimes you will want to create a page with many children (a section). First, 
 ```
 
 On the parent pages, add this YAML front matter parameter:
--  `has_children: true` (tells us that this is a parent page)
+- `has_children: true` (tells us that this is a parent page)
 
 #### Example
 {: .no_toc }
