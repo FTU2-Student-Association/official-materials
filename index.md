@@ -22,7 +22,8 @@ Just that simple.
 
 ### Hello mina
 
-Để text đây chưa rảnh ghi.
+Để text đây chưa rảnh ghi.  
+Edit thử nè.
 
 <!-- ### Quick start: Use as a GitHub Pages remote theme
 
