@@ -80,8 +80,10 @@ Just the Docs is distributed by an [MIT license](https://github.com/pmarsceill/j
 
 ### Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/pmarsceill/just-the-docs#contributing).
+Any contribution, especially from HoSivi Love, is all welcome <3.  
+Before committing a change, contacting the admin of this post is highly recommended.
+
+<!-- email, or any other method with the owners of this repository before making a change. Read more about becoming a contributor in [our GitHub repo](https://github.com/pmarsceill/just-the-docs#contributing). -->
 
 #### Thank you to the contributors of YAWAH
 
@@ -93,8 +95,8 @@ email, or any other method with the owners of this repository before making a ch
 {% endfor %}
 </ul>
 
-### Code of Conduct
+<!-- ### Code of Conduct
 
 Just the Docs is committed to fostering a welcoming community.
 
-[View our Code of Conduct](https://github.com/pmarsceill/just-the-docs/tree/master/CODE_OF_CONDUCT.md) on our GitHub repository.
+[View our Code of Conduct](https://github.com/pmarsceill/just-the-docs/tree/master/CODE_OF_CONDUCT.md) on our GitHub repository. -->
