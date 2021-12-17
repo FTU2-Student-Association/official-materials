@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Targeting Tag
-nav_order: 
+nav_order: 2
 # has_children: true
 parent: CSS
 # grand_parent:
