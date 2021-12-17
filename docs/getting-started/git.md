@@ -193,5 +193,3 @@ Bước 27:
 Bước 28:
 
 ![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/git/Fri-17-Dec-2021-17-55-09.png)
-
-Bước 29:
