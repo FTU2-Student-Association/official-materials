@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Shortcuts
-nav_order: 1
+nav_order: 10
 parent: VS Studio code
 grand_parent: Getting started
 ---
