@@ -34,7 +34,8 @@ nav_order: 10
       19. [Heading IDs](#heading-ids)
       20. [Linking to Heading IDs](#linking-to-heading-ids)
       21. [Task Lists](#task-lists)
-   3. [Tips&Tricks](#tipstricks)
+   3. [Tips](#tips)
+   4. [Tips&Tricks](#tipstricks)
       1. [VS Code shortcuts](#vs-code-shortcuts)
       2. [VS Code shortcuts for Markdown](#vs-code-shortcuts-for-markdown)
       3. [HTML shorcuts](#html-shorcuts)
@@ -375,6 +376,8 @@ X^2^
 
 X^2^
 >Không đọc được ở Github -->
+## Tips
+To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/getting-started.md %}#aux-links) in your site's `_config.yml` file
 
 ---
 

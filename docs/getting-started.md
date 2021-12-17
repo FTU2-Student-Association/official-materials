@@ -1,12 +1,13 @@
 ---
 layout: default
-title: Configuration
+title: Getting started
+has_children: true
 nav_order: 2
 ---
 
+
 # Configuration
 {: .no_toc }
-
 
 Just the Docs has some specific configuration parameters that can be defined in your Jekyll site's _config.yml file.
 {: .fs-6 .fw-300 }
@@ -19,9 +20,7 @@ Just the Docs has some specific configuration parameters that can be defined in 
 
 ---
 
-
 View this site's [_config.yml](https://github.com/pmarsceill/just-the-docs/tree/master/_config.yml) file as an example.
-
 
 ## Site logo
 
@@ -67,8 +66,8 @@ search:
 ```yaml
 # Aux links for the upper right navigation
 aux_links:
-  "Just the Docs on GitHub":
-    - "//github.com/pmarsceill/just-the-docs"
+  "YAWAH on GitHub":
+    - "//github.com/FTU2-Student-Association/official-materials"
 
 # Makes Aux links open in a new tab. Default is false
 aux_links_new_tab: false
@@ -112,7 +111,7 @@ _note: `footer_content` is deprecated, but still supported. For a better experie
 - `last_edit_time_format` uses Ruby's DateTime formatter; see examples and more information [at this link.](https://apidock.com/ruby/DateTime/strftime)
 - `gh_edit_repository` is the URL of the project's GitHub repository
 - `gh_edit_branch` is the branch that the docs site is served from; defaults to `master`
-- `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/))
+<!-- - `gh_edit_source` is the source directory that your project files are stored in (should be the same as [site.source](https://jekyllrb.com/docs/configuration/options/)) -->
 - `gh_edit_view_mode` is `"tree"` by default, which brings the user to the github page; switch to `"edit"` to bring the user directly into editing mode
 
 ## Color scheme
@@ -195,4 +194,3 @@ just_the_docs:
     tutorials:
       name: Tutorials
 ```
-
