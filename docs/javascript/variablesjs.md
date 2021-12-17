@@ -26,10 +26,6 @@ var `tên biến`;
 var dayLaViDu;
 ```
 
->Lưu ý: tên biến có định dạng viết liền không cách, viết hoa chữ cái đầu từ thứ 2 trở đi  
->Ví dụ: northAmerica, newVariables
-{: .q}
-
 ---
 
 ## Gắn giá trị cho variable
@@ -62,7 +58,13 @@ newVar = 5;
 ```
 
 >Các cho người rảnh.
+>Còn những cách khác nữa nữa tuy nhiên không cần phải làm cầu kỳ khó khăn cho người code chung, nếu có thể luôn luôn chọn `cách 1`.
 {: .q}
 
->Còn những cách khác nữa nữa tuy nhiên không cần phải làm cầu kỳ khó khăn cho người code chung, nếu có thể luôn luôn chọn `cách 1`.
+## Format của biến
+
+Thông nhất chỉ sử dụng một kiểu đặt tên biến duy nhất
+
+>Tên biến có định dạng viết liền không cách, viết hoa chữ cái đầu từ thứ 2 trở đi, không có chữ số đằng sau, không thêm bất cứ thứ gì có vẻ `kỳ lạ!`  
+>Ví dụ biến hợp lệ: northAmerica, newVariables
 {: .q}
