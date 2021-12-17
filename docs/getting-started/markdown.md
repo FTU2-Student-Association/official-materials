@@ -4,12 +4,15 @@ title: Markdown
 nav_order: 10
 parent: Getting started
 ---
-
+<!-- markdownlint-disable MD022 MD025-->
 # Markdown
 {: .no_toc}
+<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-disable MD022-->
 
 ## Table of contents
 {: .no_toc .text-delta }
+<!-- markdownlint-enable MD022-->
 
 1. TOC
 {:toc}
@@ -346,12 +349,15 @@ X^2^
 
 Để gõ code trong định dạng Markdown không lỗi, ta có thể sử dụng `code block` để bao bọc
 lấy đoạn code bên trong bằng cách thêm 3 dấu back quote theo như trong hình, không tính
+<!-- markdownlint-disable MD031 -->
 đến dấu "|".
 ```markdown
 |```markdown
 |Nội dung
 |```
 ```
+<!-- markdownlint-enable MD031 -->
+
 Phần markdown có thể được thay đổi để phù hợp với ngôn ngữ trong đoạn codeblock, xem qua link sau để hiểu hơn.  
 [Rule for codeblock specify](https://rdmd.readme.io/docs/code-blocks){: .btn .btn-blue .fs-3}
 

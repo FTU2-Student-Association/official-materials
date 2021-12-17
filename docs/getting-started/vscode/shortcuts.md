@@ -5,7 +5,8 @@ nav_order: 1
 parent: VS Studio code
 grand_parent: Getting started
 ---
-# Shortcuts for VS Studio code
+<!-- markdownlint-disable MD022 MD025-->
+# {{page.title}}
 {: .no_toc }
 
 ## Table of contents
@@ -13,6 +14,7 @@ grand_parent: Getting started
 
 1. TOC
 {:toc}
+<!-- markdownlint-enable MD022 MD025-->
 
 ## VS Code shortcuts
 
