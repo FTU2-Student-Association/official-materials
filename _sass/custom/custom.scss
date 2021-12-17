@@ -14,3 +14,22 @@ img[alt$="><"] {
   float: none!important;
 }
 
+.m-auto {
+  margin-left: 50%;
+  // position: absolute;
+  transform: translate(-50%);
+  // margin: auto;
+  // text-align: center;
+  // margin-right: ;
+}
+
+.t-auto {
+  text-align: center;
+}
+
+.q {
+  border-left: 5px solid rgb(53, 31, 179);
+  padding-left: 5px;
+  background-color: rgba(179, 179, 179, 0.199);
+  margin-left: 0%;
+}

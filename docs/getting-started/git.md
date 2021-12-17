@@ -193,3 +193,71 @@ Bước 27:
 Bước 28:
 
 ![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/git/Fri-17-Dec-2021-17-55-09.png)
+
+### No-format
+
+- You can view all of your settings and where they are coming from using:  
+<!-- markdownlint-disable MD014-->
+```shell
+$ git config --list --show-origin
+```
+<!-- markdownlint-enable MD014-->
+
+- Your Identity: first step
+<!-- markdownlint-disable MD014-->
+```shell
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+```
+<!-- markdownlint-enable MD014-->
+
+- To set main as the default branch name do:
+<!--  -->
+```shell
+git config --global init.defaultBranch main
+```
+
+- Check setting  
+<!-- markdownlint-disable MD014-->
+```shell
+$ git config –list
+```
+<!-- markdownlint-enable MD014-->
+- To help: add -h
+- Initializing a Repository in an Existing Directory
+<!-- markdownlint-disable MD014-->
+```shell
+$ cd C:/Users/user/my_project
+and type:
+$ git init
+```
+<!-- markdownlint-enable MD014-->
+
+- Existing:
+<!-- markdownlint-disable MD014-->
+```shell
+$ git add *.c
+$ git add LICENSE
+$ git commit -m 'Initial project version'
+```
+<!-- markdownlint-enable MD014-->
+
+- Cloning an Existing Repository
+<!--  -->
+```shell
+git clone `https://github.com/libgit2/libgit2`
+```
+
+- Checking the Status of Your Files
+<!-- markdownlint-disable MD014-->
+```shell
+$ git status
+```
+<!-- markdownlint-enable MD014-->
+
+- Tracking New Files
+<!-- markdownlint-disable MD014-->
+```shell
+$ git add README
+```
+<!-- markdownlint-enable MD014-->
