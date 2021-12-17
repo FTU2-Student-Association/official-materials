@@ -17,6 +17,11 @@ parent: Javascript
 1. TOC
 {:toc}
 <!-- markdownlint-enable MD022 MD025-->
+## Quy tắc xài function chung
+
+1. Nếu có thể, `luôn luôn` đặt tên cho function hoặc một hành động cụ thể nhằm cho việc gọi lại function đó là khiến code dễ đọc hơn. Tránh viết quá nhiều function lồng vào anh (như anh :/)
+
+---
 
 ## Built-in function (Hàm có sẵn)
 
@@ -42,6 +47,8 @@ Kết quả
 
 ![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/function/Fri-17-Dec-2021-22-37-27.png)
 
+---
+
 ### Console
 
 `Hiệu ứng` Dùng để in thông tin, kết quả ra console
@@ -49,6 +56,7 @@ Kết quả
 `Mục đích`
 
 - Dùng để kiểm tra xem một function nào của Javascript đã chạy hay chưa. (tương tự alear, nhưng được sử dụng nhiều hơn vì kết quả khi chạy ra sẽ được lưu lại dưới dạng lịch sử)
+- Những gì hiện ra ở console.log() đều là những thứ các hàm khác nhận được.
 
 `Cú pháp`
 
@@ -81,10 +89,48 @@ custom console logs
 >Do chưa cần xài nên anh sẽ không nói qua, ai muốn tìm hiểu có thể xem ở link trên nhé.
 {: .q}
 
+---
+
 ### Confirm
+
+`Không quan trọng`
+Giống alert nhưng để confirm tuổi
+
+---
 
 ### Prompt
 
+`Không quan trọng`
+Giống alert nhưng để confirm tuổi
+
+---
+
 ### Set timeout
 
+`Hiệu ứng` Delay thời gian chạy của một chương trình
+
+`Mục đích`
+
+- Khiến chương trình chạy theo ý mình.
+
+`Cú pháp`
+
+```js
+setTimeout(function, 3000);
+function: function tuỳ chọn
+3000: thời gian tuỳ chọn, tính theo milliseconds
+```
+
+---
+
 ### Set interval
+
+`Hiệu ứng` Lập đi lập lại một function cụ thể theo thời gian
+
+`Cú pháp`
+
+```js
+setInterval(function, 3000);
+function: function tuỳ chọn
+3000: thời gian tuỳ chọn, tính theo milliseconds
+```

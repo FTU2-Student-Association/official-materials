@@ -23,3 +23,15 @@ nav_order:
 <!-- markdownlint-disable MD042-->
 [](){: .btn .btn-blue .mb-1 .mt-2 .fs-6 .m-auto}
 <!-- markdownlint-enable MD042-->
+
+`Hiệu ứng`
+
+`Mục đích`
+
+- H
+
+`Cú pháp`
+
+```js
+
+```
