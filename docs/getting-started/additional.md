@@ -17,12 +17,4 @@ parent:
 {:toc}
 <!-- markdownlint-enable MD022 MD025-->
 
-![2](../../../../../_site/assets/images/Fri-17-Dec-2021-15-17-02.png)
-
-![3](../../../../../_site/assets/images/additional/Fri-17-Dec-2021-15-23-45.png)
-
-![5](/_site/assets/images/additional/Fri-17-Dec-2021-15-24-37.png)
-
-![6](../../_site/assets/images/additional/Fri-17-Dec-2021-15-30-13.png)
-
-![7](../../site/assets/images/additional/Fri-17-Dec-2021-15-36-47.png)
+![dd](/assets/img/additional/Fri-17-Dec-2021-16-00-31.png)
