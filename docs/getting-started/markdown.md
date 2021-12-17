@@ -1,57 +1,20 @@
 ---
 layout: default
-title: My Docs
+title: Markdown
 nav_order: 10
+parent: Getting started
 ---
 
-# Official Materials
+# Markdown
+{: .no_toc}
 
->Career Fair 2022 - Website team. No cost too great.
+## Table of contents
+{: .no_toc .text-delta }
 
-1. [Official Materials](#official-materials)
-2. [Getting started](#getting-started)
-   1. [VS Studio code](#vs-studio-code)
-      1. [What is this?](#what-is-this)
-   2. [Markdown format](#markdown-format)
-      1. [Heading](#heading)
-      2. [Text](#text)
-      3. [Images](#images)
-      4. [List](#list)
-      5. [Quotes](#quotes)
-      6. [Vertical line](#vertical-line)
-      7. [Code Snippets](#code-snippets)
-      8. [Reference Lists & Titles](#reference-lists--titles)
-      9. [Markdown Footnotes](#markdown-footnotes)
-      10. [Escaping](#escaping)
-      11. [Embedding HTML](#embedding-html)
-      12. [Strike-throughs](#strike-throughs)
-      13. [Syntax Highlighting](#syntax-highlighting)
-      14. [Automatic Links](#automatic-links)
-      15. [Disable Automatic Links](#disable-automatic-links)
-      16. [Linking Images](#linking-images)
-      17. [Tables](#tables)
-      18. [Alignment](#alignment)
-      19. [Heading IDs](#heading-ids)
-      20. [Linking to Heading IDs](#linking-to-heading-ids)
-      21. [Task Lists](#task-lists)
-   3. [Tips](#tips)
-   4. [Tips&Tricks](#tipstricks)
-      1. [VS Code shortcuts](#vs-code-shortcuts)
-      2. [VS Code shortcuts for Markdown](#vs-code-shortcuts-for-markdown)
-      3. [HTML shorcuts](#html-shorcuts)
-      4. [Terminal](#terminal)
+1. TOC
+{:toc}
 
-# Getting started
-
-## VS Studio code
-
-### What is this?
-
-Normal text
-
-## Markdown format
-
----
+## Formating
 
 ### Heading
 
@@ -376,46 +339,20 @@ X^2^
 
 X^2^
 >Không đọc được ở Github -->
-## Tips
-To add auxiliary links to your site (in the upper right on all pages), add it to the `aux_links` [configuration option]({{ site.baseurl }}{% link docs/getting-started.md %}#aux-links) in your site's `_config.yml` file
 
 ---
 
-[Rule for codeblock specify](https://rdmd.readme.io/docs/code-blocks)
+### Codeblock
 
-## Tips&Tricks
+Để gõ code trong định dạng Markdown không lỗi, ta có thể sử dụng `code block` để bao bọc
+lấy đoạn code bên trong bằng cách thêm 3 dấu back quote theo như trong hình, không tính
+đến dấu "|".
+```markdown
+|```markdown
+|Nội dung
+|```
+```
+Phần markdown có thể được thay đổi để phù hợp với ngôn ngữ trong đoạn codeblock, xem qua link sau để hiểu hơn.  
+[Rule for codeblock specify](https://rdmd.readme.io/docs/code-blocks){: .btn .btn-blue .fs-3}
 
-### VS Code shortcuts
-
-* Alt + Z: toggle word wrap.
-* Ctrl + B: đóng mở thanh tác vụ bên trái nhanh.
-* Ctrl + Shift + E: trở về Explorer nhanh.
-* Ctrl + Shift + T : mở lại tab vừa tắt.
-* Ctrl + W : đóng tab đang mở.
-* Alt + [number] : đi tới một tab cố định đang mở.
-* Ctrl + D : tìm vị trí các chữ giống nhau so với chữ đang chọn phía dưới.
-* Ctrl + Alt + arrow [down/up] : đưa con trở chuột lên trên hàng trên cùng lúc.
-* Alt + D : đưa con trỏ đến các vị trí cùng lúc để edit số lượng lớn.
-* Alt + arrow [down/up] : di chuyển hàng.
-* Shift + Alt + kéo chuột : chọn nhiều dòng cùng lúc theo cùng hàng dọc.
-* Shift + Alt + arrow [down/up] : copy dòng hiện tại và paste xuống/lên (có thể xài nhiều dòng).
-* Ctrl + Shift + K : delete the entire line.
-* Ctrl + Enter : tạo dòng mới và xuống dòng đó, không gây cắt hàng.
-
-### VS Code shortcuts for Markdown
-
-* Ctrl + Shift [ -> giảm level heading.
-* Ctrl + Shift ] : giảm level heading.
-* Ctrl + Shift + P : mở setting theo list.
-
-### HTML shorcuts
-
-[HTML shortcuts](https://www.youtube.com/watch?v=45eWEO0gRHI)
-
-### Terminal
-
-* Ctrl + J: toggle between text editor and terminal.
-* Ctrl + Shift + ~ : mở terminal.
-* $ Exit : đóng terminal.
-
-Hi
+---

@@ -20,6 +20,8 @@ Just that simple.
 
 ## Getting started
 
+>Career Fair 2022 - Website team. No cost too great.
+
 ### Hello mina
 
 Để text đây chưa rảnh ghi.  
@@ -65,7 +67,6 @@ $ bundle exec jekyll serve
 If you're hosting your site on GitHub Pages, [set up GitHub Pages and Jekyll locally](https://help.github.com/en/articles/setting-up-your-github-pages-site-locally-with-jekyll) so that you can more easily work in your development environment.
 
 ### Configure Just the Docs
-
 
 ---
 
