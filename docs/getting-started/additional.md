@@ -17,4 +17,6 @@ parent:
 {:toc}
 <!-- markdownlint-enable MD022 MD025-->
 
-![:)](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/additional/Fri-17-Dec-2021-16-16-58.png)
+![:) ><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/additional/Fri-17-Dec-2021-16-16-58.png)
+
+![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/additional/Fri-17-Dec-2021-16-24-25.png)
