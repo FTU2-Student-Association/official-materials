@@ -135,27 +135,41 @@ function: function tuỳ chọn
 3000: thời gian tuỳ chọn, tính theo milliseconds
 ```
 
+---
+
 ## Custom function
+{: .fs-7}
 
 ### Cách để tạo custom function
+{: .fs-7}
 
 ### Declaration function
-
-{: .fs-5}
-
-```js
-let newFunction = function (params) {
-    
-}
-```
-
-Cách 2:
+{: .fs-5 .no_toc}
 
 ```js
 function name(params) {
     
 }
 ```
+
+>Được gọi trước khi định nghĩa (Có thể xài trước khi đọc đến nơi được định nghĩa).
+{: .q}
+
+### Expression function
+{: .fs-5 .no_toc}
+
+```js
+let newFunction = function (params) {
+    
+}
+// function được assign cho bất cứ thứ gì gọi là expression function
+```
+
+>Không được gọi trước khi định nghĩa (Có thể xài trước khi đọc đến nơi được định nghĩa).
+{: .q}
+
+### Arrow function
+{: .fs-5 .no_toc}
 
 ---
 
@@ -176,7 +190,3 @@ Nếu paste một đối số vào một function không có đối số từ đ
 ---
 
 ## Các loại định nghĩa function
-
-### Expression function
-
-### Arrow function
