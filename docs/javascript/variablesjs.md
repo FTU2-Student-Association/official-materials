@@ -26,6 +26,8 @@ var `tên biến`;
 var dayLaViDu;
 ```
 
+Var là một key trong javaScript
+
 ---
 
 ## Gắn giá trị cho variable
