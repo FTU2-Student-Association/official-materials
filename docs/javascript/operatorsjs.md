@@ -27,7 +27,7 @@ parent: JavaScript
 | *        | Multiplication          |
 | **       | Exponentiation (ES2016) |
 | /        | Division                |
-| %        | Modulus (Remainder)     |
+| %        | Modulus (Remainder) Lấy phần dư    |
 | ++       | Increment               |
 | --       | Decrement               |
 
