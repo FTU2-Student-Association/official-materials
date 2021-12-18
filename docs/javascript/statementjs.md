@@ -18,6 +18,8 @@ parent: JavaScript
 {:toc}
 <!-- markdownlint-enable MD022 MD025-->
 
+---
+
 ## Conditional statements
 
 ### if, else if, else
