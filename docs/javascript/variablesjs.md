@@ -2,7 +2,7 @@
 layout: default
 title: Variables & data type
 nav_order: 2
-# has_children: true
+has_children: true
 parent: JavaScript
 # grand_parent:
 ---
@@ -37,6 +37,7 @@ var newVar = 5;
 ```
 
 >Nên xài cách này vì đây là cách nhanh gọn nhất.
+>Lưu ý không đặt biến tên là `var`.
 {: .q}
 
 Cách 2:
@@ -80,6 +81,45 @@ JavaScript has dynamic types. This means that the same variable can be used to h
 let x;           // Now x is undefined
 x = 5;           // Now x is a Number
 x = "John";      // Now x is a String
+```
+
+---
+
+Để kiểm tra type của data:
+
+```js
+console.log(typeof bar);
+//Dùng để kiểm tra xem biến đang chứa kiểu dữ liệu nào
+```
+
+Ví dụ
+
+```js
+typeof "John"              // Returns "string"
+typeof 3.14                // Returns "number"
+typeof true                // Returns "boolean"
+typeof false               // Returns "boolean"
+typeof x                   // Returns "undefined" (if x has no value)
+```
+
+Ví dụ complex Data
+
+```js
+typeof {name:'John', age:34} // Returns "object"
+typeof [1,2,3,4]             // Returns "object" (not "array", see note below)
+typeof null                  // Returns "object"
+typeof function myFunc(){}   // Returns "function"
+```
+
+[Đọc thêm](https://www.w3schools.com/js/js_typeof.asp)
+
+---
+
+Để kiểm tra một biến đang có kiểu boolean gì:
+
+```js
+let bar = 1 //hoặc bằng bất kỳ thứ gì
+console.log(bar == true) //sẽ in ra true nếu bar đang chứ giá trị có type boolean là true
 ```
 
 ---
@@ -220,6 +260,25 @@ if(!(null)) {
 
 ---
 
+### Use const or let
+
+There is no preferred one, its based on your choice of usage for that array or object. You have to understand mutation and reassigning clearly.
+
+>Mutation - updates the values present in the memory.
+>Reassign - variable points to new memory locations where new values are stored.
+{: .q}
+
+`Let` - offers both mutation and reassiging
+
+`Const` - offers mutation but not reassiging
+
+`Both` - doesnot offers redeclaring
+
+>If your usecase only needs mutation, you can go for const.. if you need reassigning then go for let.
+{: .q}
+
+---
+
 ### Object
 
 ```js
@@ -259,3 +318,7 @@ person.firstName = 'Mike'
 
 >Nhờ cách này chúng ta có thể tạo ra object rỗng rồi gắn giá trị vào sau, nhưng không khuyến khích làm nếu có thể định nghĩa variables ngay từ ban đầu.
 {: .q}
+
+---
+
+<!-- markdownlint-disable MD022-->
