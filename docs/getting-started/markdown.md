@@ -7,12 +7,12 @@ parent: Getting started
 <!-- markdownlint-disable MD022 MD025-->
 # Markdown
 {: .no_toc}
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 <!-- markdownlint-disable MD022-->
 
 ## Table of contents
 {: .no_toc .text-delta }
-<!-- markdownlint-enable MD022-->
+<!-- markdownlint-enable-->
 
 1. TOC
 {:toc}

@@ -7,11 +7,11 @@ has_children: true
 # grand_parent:
 ---
 
-<!-- markdownlint-disable MD022 MD025-->
+<!-- markdownlint-disable MD025-->
 # {{page.title}}
 {: .no_toc }
 
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 `Viết tắt của: Cascading Style Sheets.`
 {: .m-auto}

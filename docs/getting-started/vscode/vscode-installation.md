@@ -16,7 +16,7 @@ grand_parent: Getting started
 
 1. TOC
 {:toc}
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 ## Link tải về
 

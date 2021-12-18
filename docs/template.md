@@ -7,7 +7,7 @@ nav_order:
 # grand_parent:
 ---
 
-<!-- markdownlint-disable MD022 MD025-->
+<!-- markdownlint-disable MD025-->
 # {{page.title}}
 {: .no_toc }
 
@@ -16,7 +16,7 @@ nav_order:
 
 1. TOC
 {:toc}
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 <!-- !From here -->
 

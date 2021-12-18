@@ -11,4 +11,4 @@ has_children: true
 # {{page.title}}
 {: .no_toc }
 
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enableMD025-->

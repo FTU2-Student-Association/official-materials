@@ -16,7 +16,7 @@ parent: HTML
 
 1. TOC
 {:toc}
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 ## Định nghĩa thẻ
 

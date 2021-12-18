@@ -10,7 +10,7 @@ parent: Getting started
 # {{page.title}}
 {: .no_toc }
 
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 Gọi tắt là VScode.
 Phần mềm dùng để code chính và chạy web local host.

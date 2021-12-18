@@ -16,7 +16,7 @@ parent: JavaScript
 
 1. TOC
 {:toc}
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 ## Quy tắc xài function chung
 
 1. Nếu có thể, `luôn luôn` đặt tên cho function hoặc một hành động cụ thể nhằm cho việc gọi lại function đó là khiến code dễ đọc hơn. Tránh viết quá nhiều function lồng vào anh (như anh :/)
@@ -134,3 +134,49 @@ setInterval(function, 3000);
 function: function tuỳ chọn
 3000: thời gian tuỳ chọn, tính theo milliseconds
 ```
+
+## Custom function
+
+### Cách để tạo custom function
+
+### Declaration function
+
+{: .fs-5}
+
+```js
+let newFunction = function (params) {
+    
+}
+```
+
+Cách 2:
+
+```js
+function name(params) {
+    
+}
+```
+
+---
+
+### Scope of function (Quan trọng)
+
+Các hàm hay function được định nghĩa trong nội bộ function sẽ không được sử dụng bên ngoài phạm vi function đó.
+
+---
+
+### Return
+
+Tóm tắt: trả về một giá trị sau chữ return tại vị trí hàm được gọi (có thể song song với việc thực hiện function khác trong hàm)
+
+### Argument
+
+Nếu paste một đối số vào một function không có đối số từ đầu hàm sẽ nhận đối số đó là `arguments`
+
+---
+
+## Các loại định nghĩa function
+
+### Expression function
+
+### Arrow function

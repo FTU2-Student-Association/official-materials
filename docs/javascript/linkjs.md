@@ -16,7 +16,7 @@ parent: JavaScript
 
 1. TOC
 {:toc}
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 ## External (sử dụng file .js bên ngoài)
 

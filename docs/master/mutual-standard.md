@@ -6,9 +6,9 @@ nav_order: 1
 parent: Master
 ---
 
-<!-- markdownlint-disable MD022 MD025-->
+<!-- markdownlint-disable MD025-->
 # {{page.title}}
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 Code tới đâu note giải thích tới đó. (Ctrl + /)  
 Code càng đơn giản càng tốt.  

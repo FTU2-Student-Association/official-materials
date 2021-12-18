@@ -5,10 +5,10 @@ nav_order: 1
 description: "Just the Docs is a responsive Jekyll theme with built-in search that is easily customizable and hosted on GitHub Pages."
 permalink: /
 ---
-<!-- markdownlint-disable MD022 MD025-->
+<!-- markdownlint-disable MD025-->
 # Hội Sinh viên YAWAH
 {: .fs-9 }
-<!-- markdownlint-enable MD022 MD025-->
+<!-- markdownlint-enable MD025-->
 
 ![Badge](https://img.shields.io/github/repo-size/FTU2-Student-Association/official-materials?label=YAWAH&logo=GitHub)
 ![Commit rate](https://img.shields.io/github/commit-activity/m/FTU2-Student-Association/official-materials?label=Commit%20rate)
