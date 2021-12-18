@@ -42,7 +42,7 @@ Cách bên dưới cũng là cộng 1, nhưng sẽ cộng 1 trước trong các 
 
 ```js
 ++x;
-//Cộng 1 vào x trước khi tiếp tục logoc
+//Cộng 1 vào x trước khi thực hiện phép gán
 ```
 
 ## Assignment Operators (Toán tử gán)
