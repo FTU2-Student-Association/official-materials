@@ -3,7 +3,7 @@ layout: default
 title: Link Javascript
 nav_order: 1
 # has_children: true
-parent: Javascript
+parent: JavaScript
 # grand_parent:
 ---
 
