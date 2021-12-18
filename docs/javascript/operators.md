@@ -45,7 +45,7 @@ Cách bên dưới cũng là cộng 1, nhưng sẽ cộng 1 trước trong các 
 //Cộng 1 vào x trước khi tiếp tục logoc
 ```
 
-## Assignment Operators
+## Assignment Operators (Toán tử gán)
 
 | Operator | Example  | Same As     |
 | :------- | :------- | :---------- |
@@ -84,6 +84,18 @@ Cách bên dưới cũng là cộng 1, nhưng sẽ cộng 1 trước trong các 
 | &&       | logical and |
 | ||       | logical or  |
 | !        | logical not |
+
+## String Operators
+
+```js
+let me = 'Hello';
+let hi = me + ' World!'
+console.log(hi)
+//In ra Hello World!
+```
+
+>Đây là cách nối string cơ bản
+{: .q}
 
 ## Type Operators
 
