@@ -94,3 +94,18 @@ document.getElementById("demo").innerHTML = text;
 
 >This example finds the form element with id="frm1", in the forms collection, and displays all element values
 {: .q}
+
+---
+
+## Cách khác
+{: .fs-7}
+
+.anchors
+
+>Lấy những thẻ a có name
+{: .q}
+
+.links
+
+>Lấy những thẻ a hoặc có link?
+{: .q}
