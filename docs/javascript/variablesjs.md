@@ -23,12 +23,22 @@ parent: JavaScript
 ## Cách tạo ra variable
 
 ```js
-var `tên biến`;
+let `tên biến`;
 >Ví dụ
-var dayLaViDu;
+let dayLaViDu;
 ```
 
-Var là một key trong javaScript
+Let là một key trong javaScript
+
+---
+
+## let, const, var
+
+Khi muốn gắn giá trị, sử dụng:
+
+- let: nên xài mọi lúc mọi nơi. Scope giới hạn. Không hỗ trợ hosting.
+- const: nên xài khi định nghĩa biến không gán lại hoặc object (không xài toán tử gán cho lần 2 được). Scope giới hạn. Không hỗ trợ hosting.
+- var: hao tốn tài nguyên hơn. Được hỗ trợ hosting (đem lên đầu đoạn code) và global scope.
 
 ---
 
@@ -37,17 +47,17 @@ Var là một key trong javaScript
 Cách 1:
 
 ```js
-var newVar = 5
+let newVar = 5
 ```
 
 > Nên xài cách này vì đây là cách nhanh gọn nhất.
-> Lưu ý không đặt biến tên là `var`.
+> Lưu ý không đặt biến tên là `let`.
 {: .q}
 
 Cách 2:
 
 ```js
-var newVar1 = 5,
+let newVar1 = 5,
     newVar2 = 'Hello World!',
     newVar3 = newVar = 5,[4,7,2];
 ```
@@ -58,7 +68,7 @@ var newVar1 = 5,
 Cách 3:
 
 ```js
-var newVar
+let newVar
 newVar = 5
 ```
 
