@@ -145,6 +145,8 @@ console.log(text)
 >Khi cần học sẽ cập nhật thêm.
 {: .q}
 
+`for-in`
+
 ---
 
 ### For of
@@ -166,3 +168,48 @@ console.log(text)
 [For of](https://www.w3schools.com/js/js_loop_forof.asp){: .btn .btn-blue .mb-1 .mt-2 .fs-6 .m-auto}
 
 >Khi cần học sẽ cập nhật thêm.
+
+`for-of`
+
+---
+
+### While
+{: .fs-7}
+
+Cấu trúc:
+
+```js
+while (condition) {
+  // code block to be executed
+}
+```
+
+Ví dụ:
+
+```js
+while (i < 10) {
+  text += "The number is " + i;
+  i++;
+}
+```
+
+`while`
+
+---
+
+### Do while
+{: .fs-7}
+
+```js
+do {
+  // code block to be executed
+}
+while (condition);
+```
+
+>Do while sẽ thực hiện câu lệnh không điều kiện một lần, sau đó mới tiếp tục xét điều kiện để chạy tiếp.
+{: .q}
+
+`do-while`
+
+---
