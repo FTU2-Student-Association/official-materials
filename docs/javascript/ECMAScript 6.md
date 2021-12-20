@@ -324,6 +324,7 @@ console.log(html)
 Khi đặt tên cho module file nên đặt đuôi là `.mjs`
 
 ### Tóm tắt
+{: .fs-6}
 
 ```js
 
@@ -336,8 +337,6 @@ import { name, draw, reportArea, reportPerimeter } from './logger.js';
 
 // Để import nhanh hơn 
 import * as newObject from './logger.js';
-//Khi Xài
-newObject.name
 
 // Có thể đổi tên các biến khi export hoặc import
 export { name as namae};

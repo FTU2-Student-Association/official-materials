@@ -157,7 +157,13 @@
 
 // import logger from "./logger"
 
-import { yup, hello1 } from "./hello/index.js"
+// import { yup, getName } from "./hello/index.js"
 
-yup("World")
-hello1("Ay")
+// yup("World")
+// getName("Ay")
+
+function App() {
+    return <div>Hello World!</div>
+}
+
+ReactDOM.render(<App />, document.querySelector("#root"))
