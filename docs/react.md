@@ -1,9 +1,9 @@
 ---
 layout: default
-title: HTML DOM
+title: React
 nav_order: 6
 has_children: true
-parent: JavaScript
+# parent: 
 # grand_parent:
 ---
 
@@ -18,4 +18,4 @@ parent: JavaScript
 {:toc}
 <!-- markdownlint-enable MD025-->
 
-Tên đầy đủ: HTML DOOM
+From 13 ->
