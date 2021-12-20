@@ -293,3 +293,235 @@ function logger(...rest) {
 
 logger(array)
 ```
+
+---
+
+## Tagged template literals
+{: .fs-7}
+
+```js
+function highlight([first, ...rest], ...values) {
+    // console.log(first)
+    let donehtml = values.reduce(
+        (acc, curr) => [...acc, `<span>${curr}<span>`, rest.shift()],
+        [first]
+    )
+    return donehtml.join("")
+}
+
+let var1 = "f8"
+let course = "JavaScript"
+
+const html = highlight`Học lập trình ${course} tại ${var1}!`
+
+console.log(html)
+```
+
+---
+
+## Module
+
+Khi đặt tên cho module file nên đặt đuôi là `.mjs`
+
+### Tóm tắt
+
+```js
+
+// Khi export tại logger.js
+export { name, draw, reportArea, reportPerimeter };
+
+// Khi import tại app.js
+
+import { name, draw, reportArea, reportPerimeter } from './logger.js';
+
+// Để import nhanh hơn 
+import * as newObject from './logger.js';
+//Khi Xài
+newObject.name
+
+// Có thể đổi tên các biến khi export hoặc import
+export { name as namae};
+import {namae as newName} from './logger.js';
+
+//Chứa gọn trong một file trung chuyển
+export { namae as yup } from "./logger.js"
+import {yup} from "./index"
+```
+
+### Exporting module features
+
+```js
+export const name = 'square';
+
+export function draw(ctx, length, x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x, y, length, length);
+
+  return {
+    length: length,
+    x: x,
+    y: y,
+    color: color
+  };
+}
+
+// Khi export thông thường tại logger.js
+export default logger;
+
+// Khi import default tại app.js
+import logger from './logger.js';
+```
+
+>Bằng cách trên, ta có thể export ra bất kỳ thứ gì, nhưng cách dưới sẽ tiện lợi hơn.
+{: .q}
+
+```js
+export { name, draw, reportArea, reportPerimeter };
+```
+
+### Importing features into your script
+
+import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+
+### Applying the module to your HTML
+
+Để sử dụng module ta cần declare trong html
+
+```js
+<script type="module" src="main.js"></script>
+```
+
+### Default exports versus named exports
+
+```js
+export default randomSquare;
+
+import randomSquare from './modules/square.js';
+```
+
+### Renaming imports and exports
+
+Ví dụ1
+
+```js
+// inside module.js
+export {
+  function1 as newFunctionName,
+  function2 as anotherNewFunctionName
+};
+
+// inside main.js
+import { newFunctionName, anotherNewFunctionName } from './modules/module.js';
+```
+
+Ví dụ 2
+
+```js
+// inside module.js
+export { function1, function2 };
+
+// inside main.js
+import { function1 as newFunctionName,
+         function2 as anotherNewFunctionName } from './modules/module.js';
+```
+
+>Lý do tạo sao phải rename
+{: .q}
+
+```js
+import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
+import { name, draw, reportArea, reportPerimeter } from './modules/circle.js';
+import { name, draw, reportArea, reportPerimeter } from './modules/triangle.js';
+// Bị lỗi
+
+import { name as squareName,
+         draw as drawSquare,
+         reportArea as reportSquareArea,
+         reportPerimeter as reportSquarePerimeter } from './modules/square.js';
+
+import { name as circleName,
+         draw as drawCircle,
+         reportArea as reportCircleArea,
+         reportPerimeter as reportCirclePerimeter } from './modules/circle.js';
+
+import { name as triangleName,
+        draw as drawTriangle,
+        reportArea as reportTriangleArea,
+        reportPerimeter as reportTrianglePerimeter } from './modules/triangle.js';
+// Sửa lỗi
+```
+
+---
+
+### (Nên làm theo) Creating a module object
+
+```js
+// In export file
+export { name, draw, reportArea, reportPerimeter };
+
+// In import
+import * as Module from './modules/triangle.js';
+
+// Use
+triangle.function1()
+triangle.function2()
+etc.
+```
+
+Cách ultimate
+
+```js
+modules/
+  canvas.js
+  shapes.js
+  shapes/
+    circle.js
+    square.js
+    triangle.js
+
+//In shapes.js
+export { Square } from './shapes/square.js';
+export { Triangle } from './shapes/triangle.js';
+export { Circle } from './shapes/circle.js';
+
+//In main
+import { Square, Circle, Triangle } from './modules/shapes.js';
+```
+
+### Dynamic module loading
+
+Top level await
+
+```js
+// colors.json
+{
+  "yellow": "#F4D03F",
+  "green": "#52BE80",
+  "blue": "#5499C7",
+  "red": "#CD6155",
+  "orange": "#F39C12"
+}
+
+// fetch request: getColors.json
+const colors = fetch('../data/colors.json')
+ .then(response => response.json());
+
+export default await colors;
+```
+
+>We're using the keyword await before specifying the constant colors to export. This means any other modules which include this one will wait until colors has been downloaded and parsed before using it.
+{: .q}
+---
+
+## Optional chaining (?.)
+
+Sử dụng khi không chắc một property hay function nào đó đang có mặt
+
+Cú pháp
+
+```js
+obj.val?.prop
+obj.val?.[expr]
+obj.arr?.[index]
+obj.func?.(args)
+```

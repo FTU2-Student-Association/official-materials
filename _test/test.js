@@ -131,10 +131,33 @@
 
 // console.log(array3)
 
-let array = ["Yup", "Money", "Go"]
+// let array = ["Yup", "Money", "Go"]
 
-function logger(...rest) {
-    console.log(...rest)
-}
+// function logger(...rest) {
+//     console.log(...rest)
+// }
 
-logger(array)
+// logger(array)
+
+// function highlight([first, ...rest], ...values) {
+//     // console.log(first)
+//     let donehtml = values.reduce(
+//         (acc, curr) => [...acc, `<span>${curr}<span>`, rest.shift()],
+//         [first]
+//     )
+//     return donehtml.join("")
+// }
+
+// let var1 = "f8"
+// let course = "JavaScript"
+
+// const html = highlight`Học lập trình ${course} tại ${var1}!`
+
+// console.log(html)
+
+// import logger from "./logger"
+
+import { yup, hello1 } from "./hello/index.js"
+
+yup("World")
+hello1("Ay")
