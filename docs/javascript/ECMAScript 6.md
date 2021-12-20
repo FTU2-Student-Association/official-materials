@@ -106,7 +106,7 @@ var course = {
 console.log(course)
 //Kết quả ra như việc gắn name: name
 ```
-
+<!-- markdownlint-disable MD029-->
 2. Định nghĩa method cho object
 
 ```js
