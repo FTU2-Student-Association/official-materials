@@ -85,7 +85,7 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
 
 ## Lesson 10: Tạo một function component có thể xài lại
 
-<!-- !Bài tập về functioncomponent -->
+<!-- !Bài tập về function component -->
 <details markdown="block">
   <summary>
     Bài tập về functioncomponent
