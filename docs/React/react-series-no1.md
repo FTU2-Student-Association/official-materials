@@ -211,7 +211,7 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
 
 ---
 
-## Lesson 11: Sử dụng props
+## Lesson 11: Sử dụng props (Pro 1)
 
 ### Khái niệm props
 
@@ -310,6 +310,9 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
                 )
             }
             // Quy tắc thêm dấu {} - Truyền giá trị là biến hoặc số vào ReactDOM
+            // Các biến được nhận + mới tạo như nameTo vẫn đặt tên giống JS,
+            // không hoa chữ cái đầu
+            // Tóm tắt: in hoa chữ đầu khi là ReactComponent như App()
             let myName = "Earth-606"
             function App() {
                 return (
@@ -331,6 +334,78 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[11]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+## Cách sử dụng destructuring để truyền value vào ReactDOM (Pro 2)
+
+Có thể áp dụng để truyền default value cho function
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+a
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+## Cách truyền object value vào ReactComponent
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+a
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+## Cách truyền object trong array vào ReactComponent
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+a
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+## Cách truyền object trong array vào ReactComponent gọn nhẹ (Pro 3)
+
+Sử dụng cách cục súc
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+a
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 
