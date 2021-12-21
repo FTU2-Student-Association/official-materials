@@ -21,7 +21,7 @@ nav_order:
 <!-- !From here -->
 
 <!-- markdownlint-disable MD042-->
-[](){: .btn .btn-blue .mb-1 .mt-2 .fs-6 .m-auto}
+[](){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 <!-- markdownlint-enable MD042-->
 
 <details open markdown="block">

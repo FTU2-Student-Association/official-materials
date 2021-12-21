@@ -21,7 +21,7 @@ parent: React
 ## Bài thứ 17
 
 <!-- !Bài tập về... -->
-<details open markdown="block">
+<details markdown="block">
   <summary>
     File so bla bla
   </summary>
@@ -65,3 +65,5 @@ parent: React
 Định dạng để xuất phải là JSX.
 Phải có thẻ đóng bên ngoài bao bọc các thành phần bên trong.
 Sử dụng <React.Fragment> </React.Fragment> để bao bọc bên ngoài tránh bị thiếu thẻ ôm.
+
+[Click](chocolate\src\choco_homework\sample\index16.4.0.html)
