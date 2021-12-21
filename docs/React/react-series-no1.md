@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Next Level
+title: React series No.1
 nav_order: 3
 # has_children: true
 parent: React
@@ -17,6 +17,13 @@ parent: React
 1. TOC
 {:toc}
 <!-- markdownlint-enable MD025-->
+
+## Hướng dẫn sử dụng React series No.1
+
+Đây là các series code mẫu nhằm mục đích giới thiệu mọi người các chức năng mới của React thông qua ví dụ.
+
+- Phương thức học: deduction.
+- Cách áp dụng: tự code lại không nhìn code mẫu là hiểu bài.
 
 ## Bài thứ 17
 
@@ -66,4 +73,4 @@ parent: React
 Phải có thẻ đóng bên ngoài bao bọc các thành phần bên trong.
 Sử dụng <React.Fragment> </React.Fragment> để bao bọc bên ngoài tránh bị thiếu thẻ ôm.
 
-[Click](materials\React\F8\[16]-3.0.html)
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
