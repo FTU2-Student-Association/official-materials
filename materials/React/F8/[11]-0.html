@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            // props ở đây chỉ chung tất cả những thứ được truyền vào, nên props
+            // hiện tại đang là object. Để lấy propety từ object ta xài .
+            function ConsoleLogMyName(props) {
+                return <div>{props.nameTo}</div>
+            }
+            // Nếu không là function component, tạo biến với tên định dạng JavaScript
+            let myName = "Earth-606"
+            // Để ý dấu ngoặc nhọn {}, dấu này sẽ được sử dụng khi muốn truyền một giá
+            // trị JavaScript vào ReactDOM (khi truyền vào HTML element ta luôn xài {})
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <ConsoleLogMyName nameTo={myName} />
+                    </div>
+                )
+            }
+            // Biến nameTo sẽ truyền lên thế chỗ props ở trên
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
