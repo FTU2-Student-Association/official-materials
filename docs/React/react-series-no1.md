@@ -36,7 +36,43 @@ parent: React
   <summary>
     Bài tập về cách viết HTML trong React
   </summary>
-
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <!-- Import thư viện React -->
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <!-- Import thư viện ReactDOM -->
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <!-- Import thư viện ReactBabel -->
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            // Xem kỹ phần bên dưới, cách viết function sẽ không đổi
+            // Nhớ rằng để trả về giá trị, function cần return
+            // Xem kỹ xem chúng ta return gì
+            // Xem kỹ method ReactDOM.render, những gì thuộc về React đều
+            // viết hoa chữ cái đầu ở mỗi từ, không cách
+            function App() {
+                return <div>Hello World</div>
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[0].html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
