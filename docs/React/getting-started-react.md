@@ -20,7 +20,7 @@ parent: React
 
 ---
 
-## Hướng dẫn chạy dự án bằng React
+## Hướng dẫn cài đặt dự án React
 
 ### Bước 1: Cài đặt NodeJS
 
@@ -42,11 +42,78 @@ Chọn cấu hình `phù hợp` với máy tính, tải về và cài đặt the
 >Mặc định máy mọi người đã cài đặt [**Git**](https://git-scm.com/downloads).
 {: .q}
 
-Chọn thư mục muốn cài đặt dự án vào bên trong, nhấn chuột phải và chọn Git Bash. Một terminal sẽ hiện lên như sau:
+Chọn thư mục muốn cài đặt dự án vào bên trong, nhấn chuột phải và chọn Git Bash here. Một terminal sẽ hiện lên như sau:
 
 ![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/getting-started-react/Tue-21-Dec-2021-14-47-18.png)
 
+Copy dòng lệnh này vào (chuột phải để chọn option copy) với `yourapp` là tên dự án đang muốn tạo.
 
+```bash
+npx create-react-app yourapp
+```
+
+Nếu gặp lỗi [you are running create-react-app 4.0.3 which is behind the latest release (5.0.0)](https://stackoverflow.com/questions/70358643/you-are-running-create-react-app-4-0-3-which-is-behind-the-latest-release-5-0-0), nhập dòng lệnh dưới vào
+{: .q}  
+
+```bash
+npx clear-npx-cache
+```
+
+Sau đó nhập lại lệnh create-react-app như phía trên.
+
+Sau khi tạo xong sẽ thấy các thư mục trong file vừa tạo như dưới đây thì đã cài đặt hoàn tất.
+
+![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/getting-started-react/Tue-21-Dec-2021-15-03-43.png)
+
+---
+## Hướng dẫn chạy live sever bằng NodeJS
+
+### Điều hướng terminal đúng vị trí
+
+Đầu tiên, phải đảm bảo terminal đang hướng đến thư mục `yourapp` mà chúng ta đã tạo. Để chuyển vị trí terminal ta làm như sau.
+
+Cách 1: Từ terminal vừa cài đặt xong từ bước 1, nhập lệnh sau với `yourapp` là tên dự án vừa tạo thành công.
+
+```bash
+cd yourapp
+```
+
+Cách 2: Tìm đến thư mục `yourapp`, click chuột phải và chọn `Copy as path`
+
+![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/getting-started-react/Tue-21-Dec-2021-15-12-46.png)
+
+Tuỳ vào máy tính mà sẽ giống hình trên hoặc dưới
+{: .q}
+
+![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/getting-started-react/Tue-21-Dec-2021-15-13-19.png)
+
+Sau đó copy vào terminal với cú pháp như Sau
+
+```bash
+cd "path"
+```
+
+Ví dụ:
+
+```bash
+cd "E:\Study\Code\Career Fair 2022\official-materials\materials\React"
+```
+
+Kiểm tra lại xem terminal đang ở đúng thư mục chưa
+
+![><](https://raw.githubusercontent.com/FTU2-Student-Association/official-materials/gh-pages/assets/images/getting-started-react/Tue-21-Dec-2021-15-16-25.png)
+
+### Chạy live sever
+
+Nhập lệnh sau vào terminal
+
+```bash
+npm start
+```
+
+Bật trình duyệt và thưởng thức
+
+---
 
 ## Các thư viện cần sử dụng
 
