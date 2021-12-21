@@ -24,14 +24,9 @@ nav_order:
 [](){: .btn .btn-blue .mb-1 .mt-2 .fs-6 .m-auto}
 <!-- markdownlint-enable MD042-->
 
-`Hiệu ứng`
+<details open markdown="block">
+  <summary>
 
-`Mục đích`
+  </summary>
 
-- H
-
-`Cú pháp`
-
-```js
-
-```
+</details>

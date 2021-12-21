@@ -1,0 +1,20 @@
+// Màu nền
+$body-background-color: hsl(220, 8%, 15%);
+$sidebar-color: hsl(210, 5%, 12%);
+$border-color: hsla(0, 0%, 62%, 0.253);
+
+$body-text-color: #b0b0b1;
+// $body-heading-color: #bbbbbb;
+$body-heading-color: hsl(0, 0%, 75%);
+$nav-child-link-color: $grey-dk-000;
+$search-result-preview-color: $grey-dk-000;
+
+// $link-color: hsl(214, 43%, 60%);
+$link-color: #58a6ff;
+$btn-primary-color: $blue-200;
+$base-button-color: $grey-dk-250;
+
+$code-background-color: #1b1d22;
+$search-background-color: #1b1d22;
+$table-background-color: #1b1d22;
+$feedback-color: darken($sidebar-color, 3%);

@@ -18,22 +18,50 @@ parent: React
 {:toc}
 <!-- markdownlint-enable MD025-->
 
-# 0
+## Bài thứ 17
 
-## 1
+<!-- !Bài tập về... -->
+<details open markdown="block">
+  <summary>
+    File so bla bla
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script
+   src="https://unpkg.com/react@17/umd/react.development.js"
+   crossorigin
+  ></script>
+  <script
+   src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+   crossorigin
+  ></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+ </head>
+ <body>
+  <div id="root"></div>
+  <script type="text/babel">
+   //! Cách render nhanh bằng điều kiện
 
-### 2
+   function App() {
+    let IfCome = true;
+    // Thử sửa bằng false để thấy kết quả
+    return (
+     <div id="wrapper">{IfCome && <div>Hello World</div>}</div>
+    );
+   }
+   ReactDOM.render(<App />, document.getElementById("root"));
+  </script>
+ </body>
+</html>
+```
+</details>
 
-#### 4
-
-##### 5
-
-###### 6
-
-Nani
-
->Nani
-
-[Click me](chocolate\src\choco_homework\sample\index16.4.0.html)
-
-[Click me](chocolate\src\choco_homework\sample\index16.4.0.html)
+Định dạng để xuất phải là JSX.
+Phải có thẻ đóng bên ngoài bao bọc các thành phần bên trong.
+Sử dụng <React.Fragment> </React.Fragment> để bao bọc bên ngoài tránh bị thiếu thẻ ôm.

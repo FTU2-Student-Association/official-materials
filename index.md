@@ -7,7 +7,6 @@ permalink: /
 ---
 <!-- markdownlint-disable MD025-->
 # Hội Sinh viên YAWAH
-{: .fs-9 }
 <!-- markdownlint-enable MD025-->
 
 ![Badge](https://img.shields.io/github/repo-size/FTU2-Student-Association/official-materials?label=YAWAH&logo=GitHub)
