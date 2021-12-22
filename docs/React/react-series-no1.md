@@ -1690,7 +1690,7 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
-## Nên học thuộc cái này để master DOM event
+### Nên học thuộc cái này để master DOM event
 
 <!-- ! -->
 <details markdown="block">
@@ -1879,6 +1879,84 @@ Có thể áp dụng để truyền default value cho function
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[18]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+## Lesson 19: Sử dụng spread để tạo button tự thay đổi theo thông tin được nhập vào
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách xài đi xài lại một component (Các hay hơn)
+            // Spread (định dạng {...var}) có chức nâng xoá đi các thanh bọc
+            // bên ngoài của object là {} và của array là []
+            // *Như ví dụ dưới, nếu ta xoá đi thanh bọc thì giống như ta đang
+            // truyền thẳng props là href={href}, onClick={() => onClick(title)}
+            // vào return Component
+            //*Việc này giống như thêm class hay id vào html thôi không có gì cao
+            // siêu cả
+            function BtnHref({ title, href, onClick }) {
+                let Component = "button"
+                const props = {}
+                if (href) {
+                    Component = "a"
+                    props.href = href
+                }
+                if (onClick) {
+                    props.onClick = () => onClick(title)
+                }
+                return <Component {...props}>{title}</Component>
+            }
+            // Mặc định sẽ là nút button
+            // nếu có function truyền vào, sẽ có chức năng thêm
+            // Nếu có href truyền vào, đổi qua phím a
+            // Thay đổi code của chính mình để thấy kết quả
+            function App() {
+                function OnClick(hi) {
+                    console.log(hi)
+                }
+                return (
+                    <div id="wrapper">
+                        <BtnHref
+                            title="Hello World"
+                            href="https://www.google.com/"
+                            onClick={OnClick}
+                        />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[19]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 
