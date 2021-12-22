@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            // Sử dụng ...inputProps phía trên để lấy toàn bộ các đối số còn lại
+            // không phải label
+            // Khi lấy toàn bộ các element như vậy, các element đó sẽ ở dạng array
+            // bị đóng khung lại với []
+            // *Để đem xuống, ta phóng thích ngoặc [] bằng spread (thêm dấu ... vào trước inputProps)
+            // để chỉ truyền thẳng các element trong array inputProps phía trên
+            // *Gỡ các dấu ... ra để trải nghiệm lỗi
+            function MyInput({ label, ...inputProps }) {
+                return (
+                    <div>
+                        <label>{label}</label>
+                        <input {...inputProps} />
+                    </div>
+                )
+            }
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <MyInput
+                            label="Hello 7749"
+                            type="text"
+                            placeholder="This is good"
+                            style={{
+                                backgroundColor: "red",
+                                color: "white",
+                                height: "20px",
+                            }}
+                        />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>

@@ -2147,6 +2147,138 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
+### Cách truyền props số lượng lớn (Phần 1)
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    Cách ngu người
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            // type = "text" là để cài giá trị mặc định
+            // Ứng dụng kiến thức cũ để làm cái này
+            // Nhưng không nên xài cách này
+            function MyInput({ label, type = "text", placeholder }) {
+                return (
+                    <div>
+                        <label>{label}</label>
+                        <input type={type} placeholder={placeholder} />
+                    </div>
+                )
+            }
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <MyInput
+                            label="Hello 7749"
+                            placeholder="This is not good"
+                        />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[21]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+### Cách truyền props số lượng lớn (Phần 2)
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            // Sử dụng ...inputProps phía trên để lấy toàn bộ các đối số còn lại
+            // không phải label
+            // Khi lấy toàn bộ các element như vậy, các element đó sẽ ở dạng array
+            // bị đóng khung lại với []
+            // *Để đem xuống, ta phóng thích ngoặc [] bằng spread (thêm dấu ... vào trước inputProps)
+            // để chỉ truyền thẳng các element trong array inputProps phía trên
+//*Gỡ các dấu ... ra để trải nghiệm lỗi
+            function MyInput({ label, ...inputProps }) {
+                return (
+                    <div>
+                        <label>{label}</label>
+                        <input {...inputProps} />
+                    </div>
+                )
+            }
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <MyInput
+                            label="Hello 7749"
+                            type="text"
+                            placeholder="This is good"
+                            style={{
+                                backgroundColor: "red",
+                                color: "white",
+                                height: "20px",
+                            }}
+                        />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[21]-2.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
 ## Template
 
 <!-- ! -->
