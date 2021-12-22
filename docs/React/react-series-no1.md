@@ -1620,7 +1620,7 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
-## Master DOM event
+## Lesson 17: Master DOM event
 
 ### Bắt đầu đưa function truyền vào ra ngoài
 
@@ -1690,6 +1690,73 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
+## Nên học thuộc cái này để master DOM event
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            let name = "Hello World"
+            // Ta nên truyền thẳng function OnClick vào function khác thế này
+            // Sau đó thêm arrow function vào chỗ onClick
+            // Lý do thêm lắm arrow function như vậy vì sau onClick (DOM event)
+            // Sẽ cần thực thi một function gốc (là arrow function ở đây)
+            // Thử xoá đi arrow function sẽ hiểu lý do
+            // Nhờ cách này chúng ta vẫn truyền đối số name vào function OnClick
+            // như bình thường
+            function Render1({ name, onClick }) {
+                return (
+                    <div>
+                        <p onClick={() => onClick(name)}>{name}</p>
+                    </div>
+                )
+            }
+            function App() {
+                function OnClick(name) {
+                    console.log(name)
+                }
+                return (
+                    <div id="wrapper">
+                        <Render1 name={name} onClick={OnClick} />
+                    </div>
+                )
+            }
+            // Nhờ cách này, code ở phần App sẽ clean hơn, và giúp render tốt hơn
+            // do ReactDOM.render nhận trực tiếp App
+            // => Tóm tắt: loại bỏ mớ bùi nhùi ở App càn nhiều càng tốt
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[17]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
 ## Template
 
 <!-- ! -->
@@ -1700,6 +1767,7 @@ Có thể áp dụng để truyền default value cho function
 ```html
 a
 ```
+
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
