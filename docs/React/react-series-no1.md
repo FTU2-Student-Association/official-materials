@@ -1,7 +1,7 @@
 ---
 layout: default
-title: React series No.1
-nav_order: 3
+title: React series No.1 - Basic
+nav_order: 2
 # has_children: true
 parent: React
 # grand_parent:
