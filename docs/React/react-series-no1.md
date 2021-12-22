@@ -1970,12 +1970,53 @@ Có thể áp dụng để truyền default value cho function
     File
   </summary>
 ```html
-a
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách render nhanh bằng điều kiện
+            function App({ isBlack, isOrange }) {
+                let IfCome1 = false
+                let IfCome2 = true
+                // Thử sửa bằng false để thấy kết quả
+                return (
+                    <div id="wrapper">
+                        {IfCome1 && <div>Hello World 1</div>}
+                        {IfCome2 && <div>Hello World 2</div>}
+                        {isBlack && <div>Some black box here</div>}
+                        {isOrange && <div>Some orange box here</div>}
+                    </div>
+                )
+            }
+            // Treat cái App này không khác gì một Function component to con
+            ReactDOM.render(
+                <App isBlack={true} isOrange={false} />,
+                document.getElementById("root")
+            )
+        </script>
+    </body>
+</html>
 ```
 
 </details>
 
-[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[20]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 
