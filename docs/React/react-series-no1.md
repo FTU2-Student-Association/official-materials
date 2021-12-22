@@ -1439,6 +1439,129 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
+## Lesson 16: DOM event
+
+### Cách thêm DOM event đơn giản
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách nhấn vào ra Hello World
+            // Nhớ rằng trong ReactDOM, các DOM event sẽ được viết hoa chữ
+            // cái đầu phía sau
+            // để tạo một function, có thể sử dụng arrow function cho tiện
+            // thay () => console.log("Hello World")
+            // bằng function () {console.log("Hello World")}
+            // thì kết quả không đổi, nhưng arrown function đẹp hơn
+            function ClickMe() {
+                return (
+                    <div onClick={() => console.log("Hello World")}>
+                        Click me
+                    </div>
+                )
+            }
+            // Lưu ý mỗi khi thêm biến hay thêm function thì sử dụng {} như trên
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <ClickMe />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[16]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+### Cách thêm DOM event bằng cách sử dụng thêm nội dung event đang diễn ra
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách nhấn vào ra tên khoá học
+            // Nếu không truyền đối số cho ClickMe thì event mặc định sẽ là hành động
+            // mình đang làm
+            // target là để hướng đến vị trí của DOM component mình vừa click vào
+            // (là div với nội dung là Click me trong trường hợp này)
+            // thêm textContent để lấy ra nội dung text từ thẻ div đó
+            function ClickMe() {
+                return (
+                    <div onClick={() => console.log(event.target.textContent)}>
+                        Click me
+                    </div>
+                )
+            }
+            // Xoá lần lượt textContent và target để thấy thêm kết quả
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <ClickMe />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[16]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
 ## Template
 
 <!-- ! -->
