@@ -1502,7 +1502,7 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
-### Cách thêm DOM event bằng cách sử dụng thêm nội dung event đang diễn ra
+### Cách thêm DOM event bằng cách sử dụng thêm nội dung event đang diễn ra (Phần 1)
 
 <!-- ! -->
 <details markdown="block">
@@ -1559,6 +1559,134 @@ Có thể áp dụng để truyền default value cho function
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[16]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+### Cách thêm DOM event bằng cách sử dụng thêm nội dung event đang diễn ra (Phần 2)
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    Áp dụng cái vừa học
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            // Nhớ mở console để xem kết quả
+            function ClickMe({ contentHere }) {
+                return (
+                    <div onClick={() => console.log(event.target.textContent)}>
+                        {contentHere}
+                    </div>
+                )
+            }
+            let name1 = "Hello World"
+            let name2 = "No sweet without sweat"
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <ClickMe contentHere={name1} />
+                        <ClickMe contentHere={name2} />
+                        <ClickMe contentHere="You can insert here too" />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[16]-2.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+## Master DOM event
+
+### Bắt đầu đưa function truyền vào ra ngoài
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách nhấn vào ra tên khoá học (Cách 2, tốt hơn, nhưng vẫn chưa tối ưu)
+            let name = "Hello World"
+            function Render1({ name, onClick }) {
+                return (
+                    <div>
+                        <p onClick={onClick}>{name}</p>
+                    </div>
+                )
+            }
+            function App() {
+                // Nên viết OnClick ra riêng như thế này nhằm mục đích kiểm soát tốt
+                // Tên function phục vụ ReactDOM nhớ viết hoa cả chữ cái đầu
+                // do name sẽ không được đưa thẳng vào ReactDOM (nhận biết bằng cách
+                // nếu sau chữ return có các thẻ div đi kèm là đang trong vùng hoạt động
+                // của ReactDOM) mà chỉ ở dạng function
+                // => Cho nên name ở dưới không cần dấu {} (cần cho đưa JavaScript vào
+                // ReactDOM)
+                function OnClick(name) {
+                    console.log(name)
+                }
+                return (
+                    <div id="wrapper">
+                        <Render1 name={name} onClick={() => OnClick(name)} />
+                    </div>
+                )
+            }
+            // Để ý rằng do mình vẫn đang truyền arrow function vào bên trong
+            // ReactDOM (truyền vào trong App, sau return) nên các cách sau sẽ bắt
+            // đầu giải quyết vấn đề này
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[17]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 
