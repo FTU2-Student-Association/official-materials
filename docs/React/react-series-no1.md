@@ -337,6 +337,79 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
 
 ---
 
+### Sử dụng props truyền vào nhiều biến (Ví dụ thêm)
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    Sử dụng props truyền vào nhiều biến
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            function ConsoleLogMyName(props) {
+                return (
+                    <React.Fragment>
+                        <div>{props.nameTo}</div>
+                        <div>{props.age}</div>
+                        <div>{props.price - 9}</div>
+                        <div>{props.myObject.joke}</div>
+                        <div>{props.myObject.monet}</div>
+                        <div>{props.myArray2[2]}</div>
+                        <div>{props.myArray2[4]}</div>
+                    </React.Fragment>
+                )
+            }
+            let myName = "Earth-606"
+            let myAge = {
+                joke: "none",
+                monet: "not yet",
+            }
+            let myPrice = 10
+            let myArrray = [4, 5, 8]
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <ConsoleLogMyName
+                            nameTo={myName}
+                            age="Em chưa 19"
+                            price={myPrice}
+                            myObject={myAge}
+                            myArray2={myArrray}
+                        />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[11]-2.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
 ## Cách sử dụng destructuring để truyền value vào ReactDOM (Pro 2)
 
 Có thể áp dụng để truyền default value cho function
