@@ -410,22 +410,93 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
 
 ---
 
-## Cách sử dụng destructuring để truyền value vào ReactDOM (Pro 2)
+## Lesson 12: Cách sử dụng destructuring để truyền value vào ReactDOM (Pro 2)
 
 Có thể áp dụng để truyền default value cho function
 
 <!-- ! -->
 <details markdown="block">
   <summary>
-    File
+    Một cách màu mè hơn Pro 1
   </summary>
 ```html
-a
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            // Chúng ta sử dụng dấu ngoặc {} để truy cập thẳng vào object props
+            // và gọi cách property của props bằng tên thật
+            function ConsoleLogMyName({
+                nameTo,
+                age = "đây là giá trị mặc định",
+                price,
+                myObject,
+                myArray2,
+                function1 = () => console.log("Function chưa được truyền"),
+            }) {
+                // Bật console lên để xem function được truyền thế nào
+                // *Xoá thử function được truyền phía bên dưới (Hello World)
+                // để xem kết quả và suy ra công dụng của phần đặt function
+                // như trên. Xoá tương tự với biến price
+                function1()
+                return (
+                    <React.Fragment>
+                        <div>{nameTo}</div>
+                        <div>{age}</div>
+                        <div>{price - 9}</div>
+                        <div>{myObject.joke}</div>
+                        <div>{myObject.monet}</div>
+                        <div>{myArray2[2]}</div>
+                        <div>{myArray2[4]}</div>
+                    </React.Fragment>
+                )
+            }
+            let myName = "Earth-606"
+            let myAge = {
+                joke: "none",
+                monet: "not yet",
+            }
+            let myPrice = 10
+            let myArrray = [4, 5, 8]
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <ConsoleLogMyName
+                            nameTo={myName}
+                            age="Em chưa 19"
+                            price={myPrice}
+                            myObject={myAge}
+                            myArray2={myArrray}
+                            function1={() => console.log("Hello World")}
+                        />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
 ```
 
 </details>
 
-[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[12]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 
