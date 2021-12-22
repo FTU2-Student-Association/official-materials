@@ -18,27 +18,41 @@
     <body>
         <div id="root"></div>
         <script type="text/babel">
-            const course = {
-                name: "html",
-                price: 2,
-                logMe: () => console.log("Hello object"),
-            }
-            // Xem kỹ name và price trong function, chúng có giống ví dụ
-            // trên hay không?
-            function PrintMe({ newObject }) {
-                newObject.logMe()
+            const courses = [
+                {
+                    name: "html",
+                    price: 2,
+                },
+                {
+                    name: "css",
+                    price: 65,
+                },
+                {
+                    name: "hell",
+                    price: 99,
+                },
+            ]
+            // Cách classic, xem để hiểu cách map hoạt động (giống như lặp lại)
+            function PrintMe(props) {
                 return (
                     <React.Fragment>
-                        <li>{newObject.name}</li>
-                        <li>{newObject.price}</li>
+                        <div>{props.nameTo}</div>
+                        <div>{props.priceTo}</div>
                     </React.Fragment>
                 )
             }
-            // So sánh kỹ với ví dụ bên trên để thấy lợi ích
+            // Lên mạng xem thêm ví dụ về cách xài map
             function App() {
                 return (
                     <ul>
-                        <PrintMe newObject={course} />
+                        {courses.map((course, index) => {
+                            return (
+                                <PrintMe
+                                    nameTo={course.name}
+                                    priceTo={course.price}
+                                />
+                            )
+                        })}
                     </ul>
                 )
             }

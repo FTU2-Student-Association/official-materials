@@ -330,7 +330,6 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
     </body>
 </html>
 ```
-
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[11]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
@@ -403,7 +402,6 @@ Cách bài lesson sẽ không đánh số theo thứ tự nên mọi người đ
     </body>
 </html>
 ```
-
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[11]-2.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
@@ -493,7 +491,6 @@ Có thể áp dụng để truyền default value cho function
     </body>
 </html>
 ```
-
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[12]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
@@ -501,6 +498,8 @@ Có thể áp dụng để truyền default value cho function
 ---
 
 ## Lesson 13: Cách truyền object value vào ReactComponent
+
+### Cách bình thường (xem thêm cách dưới)
 
 <!-- ! -->
 <details markdown="block">
@@ -561,14 +560,13 @@ Có thể áp dụng để truyền default value cho function
     </body>
 </html>
 ```
-
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[13]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 
-## Cách truyền object trong array vào ReactComponent
+### Sử dụng destructuring để gọn nhẹ hơn (nên học)
 
 <!-- ! -->
 <details markdown="block">
@@ -576,12 +574,281 @@ Có thể áp dụng để truyền default value cho function
     File
   </summary>
 ```html
-a
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const course = {
+                name: "html",
+                price: 2,
+                logMe: () => console.log("Hello object"),
+            }
+            // Xem kỹ name và price trong function, chúng có giống ví dụ
+            // trên hay không?
+            function PrintMe({ newObject }) {
+                newObject.logMe()
+                return (
+                    <React.Fragment>
+                        <li>{newObject.name}</li>
+                        <li>{newObject.price}</li>
+                    </React.Fragment>
+                )
+            }
+            // So sánh kỹ với ví dụ bên trên để thấy lợi ích
+            function App() {
+                return (
+                    <ul>
+                        <PrintMe newObject={course} />
+                    </ul>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
 ```
-
 </details>
 
-[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[13]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+## Lesson 14: Cách truyền object trong array vào ReactComponent (Pro 3)
+
+### Cách lòng vòng, xem để hiểu hơn về map
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const courses = [
+                {
+                    name: "html",
+                    price: 2,
+                },
+                {
+                    name: "css",
+                    price: 65,
+                },
+                {
+                    name: "hell",
+                    price: 99,
+                },
+            ]
+            // Cách classic, xem để hiểu cách map hoạt động (giống như lặp lại)
+            function PrintMe(props) {
+                return (
+                    <React.Fragment>
+                        <div>{props.nameTo}</div>
+                        <div>{props.priceTo}</div>
+                    </React.Fragment>
+                )
+            }
+            // Lên mạng xem thêm ví dụ về cách xài map
+            function App() {
+                return (
+                    <ul>
+                        {courses.map((course, index) => {
+                            return (
+                                <PrintMe
+                                    nameTo={course.name}
+                                    priceTo={course.price}
+                                />
+                            )
+                        })}
+                    </ul>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[14]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+### Cách truyền nhanh hơn bằng cách bỏ thẳng object vào
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    Cách đỡ lòng vòng hơn
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const courses = [
+                {
+                    name: "html",
+                    price: 2,
+                },
+                {
+                    name: "css",
+                    price: 65,
+                },
+                {
+                    name: "hell",
+                    price: 99,
+                },
+            ]
+            // Do không sử dụng destructuring nên mới dẫn đến trường hợp object lồng
+            // object thế này, nhìn xấu
+            function PrintMe(props) {
+                return (
+                    <React.Fragment>
+                        <div>{props.course1.name}</div>
+                        <div>{props.course1.price}</div>
+                    </React.Fragment>
+                )
+            }
+            // Lên mạng xem thêm ví dụ về cách xài map
+            function App() {
+                return (
+                    <ul>
+                        {courses.map((course, index) => {
+                            return <PrintMe course1={course} />
+                        })}
+                    </ul>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[14]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+### Bỏ thẳng object + destructuring (Cách tốt nhất)
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const courses = [
+                {
+                    name: "html",
+                    price: 2,
+                },
+                {
+                    name: "css",
+                    price: 65,
+                },
+                {
+                    name: "hell",
+                    price: 99,
+                },
+            ]
+            // Không thể gọn hơn
+            function PrintMe({ course1 }) {
+                return (
+                    <React.Fragment>
+                        <div>{course1.name}</div>
+                        <div>{course1.price}</div>
+                    </React.Fragment>
+                )
+            }
+            function App() {
+                return (
+                    <ul>
+                        {courses.map((course, index) => {
+                            return <PrintMe course1={course} />
+                        })}
+                    </ul>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[14]-2.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 
@@ -597,7 +864,6 @@ Sử dụng cách cục súc
 ```html
 a
 ```
-
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
@@ -614,7 +880,6 @@ a
 ```html
 a
 ```
-
 </details>
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
