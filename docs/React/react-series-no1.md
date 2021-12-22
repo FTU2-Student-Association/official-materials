@@ -2080,6 +2080,73 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
+## Lesson 21: More about props
+
+### Cách set theme
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            function MyButton({ black }) {
+                let btnStyle = {}
+                // Do true nên mới thực hiện các lệnh trong if
+                // *So sánh với HTML/CSS, mình đang cố gán vào button:
+                // style={color: white,background-color: black} (HTML/CSS)
+                // style={color: white,backgroundColor: black} (ReactDOM)
+                // các props liên đến ReactDOM đều viết theo kiểu camelCase
+                // Ở chỗ style có 2 dấu {{}} lồng nhau là để một dấu cho việc
+                // lấy JavaScript, một dấu bao khung cho style
+                if (black) {
+                    ;(btnStyle.color = "white"),
+                        (btnStyle.backgroundColor = "black")
+                }
+                return <button style={{ ...btnStyle }}>Hello</button>
+            }
+            // Ví dụ này để chỉ rõ: khi ghi black vào trong ReactDOM thì
+            // black mặc định có giá trị là true
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <MyButton black />
+                        <MyButton />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[21]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
 ## Template
 
 <!-- ! -->
