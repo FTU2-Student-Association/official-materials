@@ -1757,7 +1757,7 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
-## Cách tạo ra ReactComponent xài lại (Reusable)
+## Lesson 18: Cách tạo ra ReactComponent xài lại (Reusable)
 
 ### Cách tạo đơn giản nhất
 
@@ -1960,7 +1960,9 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
-## Template
+## Lesson 20: Booleans, Null, Undefined sẽ không được render ra ReactDOM
+
+### Áp dụng toán tử logic &&
 
 <!-- ! -->
 <details markdown="block">
@@ -1975,7 +1977,22 @@ a
 
 [Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
-### 1
+---
+
+## Template
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+a
+```
+
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ```markdown
 class = > className
