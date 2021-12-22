@@ -500,7 +500,7 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
-## Cách truyền object value vào ReactComponent
+## Lesson 13: Cách truyền object value vào ReactComponent
 
 <!-- ! -->
 <details markdown="block">
@@ -508,12 +508,63 @@ Có thể áp dụng để truyền default value cho function
     File
   </summary>
 ```html
-a
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            const course = {
+                name: "html",
+                price: 2,
+                logMe: () => console.log("Hello object"),
+            }
+            function PrintMe(props) {
+                props.justLogMe()
+                return (
+                    <React.Fragment>
+                        <li>{props.nameIn}</li>
+                        <li>{props.priceIn}</li>
+                    </React.Fragment>
+                )
+            }
+            // Chúng ta vẫn làm bình thường trừ việc phải lấy từng
+            // property của object truyền vào Component function
+            // (sử dụng dấu chấm . để lấy giá trị con từ course)
+            function App() {
+                return (
+                    <ul>
+                        <PrintMe
+                            nameIn={course.name}
+                            priceIn={course.price}
+                            justLogMe={course.logMe}
+                        />
+                    </ul>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
 ```
 
 </details>
 
-[Xem trên website](https://ftu2-student-association.github.io/official-materials/){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[13]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
 
 ---
 

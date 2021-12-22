@@ -18,33 +18,30 @@
     <body>
         <div id="root"></div>
         <script type="text/babel">
-            const course = {
-                name: "html",
-                price: 2,
-                logMe: () => console.log("Hello object"),
-            }
-            function PrintMe(props) {
-                props.justLogMe()
-                return (
-                    <React.Fragment>
-                        <li>{props.nameIn}</li>
-                        <li>{props.priceIn}</li>
-                    </React.Fragment>
-                )
-            }
-            // Chúng ta vẫn làm bình thường trừ việc phải lấy từng
-            // property của object truyền vào Component function
-            // (sử dụng dấu chấm . để lấy giá trị con từ course)
+            const courses = [
+                {
+                    name: "html",
+                    price: 2,
+                },
+                {
+                    name: "css",
+                    price: 65,
+                },
+                {
+                    name: "hell",
+                    price: 99,
+                },
+            ]
+
             function App() {
                 return (
                     <ul>
-                        <PrintMe
-                            nameIn={course.name}
-                            priceIn={course.price}
-                            justLogMe={course.logMe}
-                        />
+                        {courses.map((course, index) => {
+                            return <li key={index}>{course.name}</li>
+                        })}
                     </ul>
                 )
+                // body
             }
             ReactDOM.render(<App />, document.getElementById("root"))
         </script>
