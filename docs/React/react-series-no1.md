@@ -2020,6 +2020,66 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
+### Áp dụng toán tử logic ||
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách render nhanh bằng điều kiện
+            // console.log(object)
+            function App({ title, content }) {
+                // Xem console
+                console.log({ title })
+                let IfCome1 = "the World"
+                let IfCome2 = null
+                // string là true
+                // null là falses
+                return (
+                    <div id="wrapper">
+                        {IfCome1 || <div>Hello World 1</div>}
+                        {IfCome2 || <div>Hello World 2</div>}
+                        {title || content}
+                    </div>
+                )
+            }
+            // Nếu không có cả title và content thì không in ra gì cả
+            ReactDOM.render(
+                <App title="" content="In ra nếu thiếu title" />,
+                document.getElementById("root")
+            )
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[20]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
 ## Template
 
 <!-- ! -->
