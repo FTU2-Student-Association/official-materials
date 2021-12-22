@@ -1757,6 +1757,131 @@ Có thể áp dụng để truyền default value cho function
 
 ---
 
+## Cách tạo ra ReactComponent xài lại (Reusable)
+
+### Cách tạo đơn giản nhất
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách xài đi xài lại một component
+            // Tại đây, Form là một object có 2 giá trị
+            // Input() {} là cách tạo ra method (bản chất là hàm)
+            // có tên là Input
+            // *Return như bình thường để trả về ReactDOM
+            const Form = {
+                Input() {
+                    return <input />
+                },
+                Checkbox() {
+                    return <input type="checkbox" />
+                },
+            }
+            // Gọi method như dưới đây
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <Form.Input />
+                        <Form.Checkbox />
+                    </div>
+                )
+            }
+            // Dứng dụng: tạo ra một biến Form, trong đó có rất nhiều
+            // ReactDOM con khác nhau giúp code dễ đọc và tiện lợi hơn
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[18]-0.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
+### Các nút linh hoạt hơn
+
+<!-- ! -->
+<details markdown="block">
+  <summary>
+    File
+  </summary>
+```html
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách xài đi xài lại một component (Cách hay hơn)
+            const Form = {
+                Input() {
+                    return <input />
+                },
+                Checkbox() {
+                    return <input type="checkbox" />
+                },
+            }
+            // Xem kỹ phần type, làm điều này sẽ giúp chúng ta đổi
+            // Các nút bấm dễ dàng nhờ reusable button
+            function App() {
+                let type = "Input"
+                let Component = Form[type]
+                return (
+                    <div id="wrapper">
+                        <Component />
+                        <Form.Checkbox />
+                    </div>
+                )
+            }
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
+```
+</details>
+
+[Xem trên website](https://ftu2-student-association.github.io/official-materials/materials\React\F8\[18]-1.html){: .btn .mb-1 .mt-2 .fs-6 .m-auto}
+
+---
+
 ## Template
 
 <!-- ! -->

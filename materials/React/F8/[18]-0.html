@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            src="https://unpkg.com/react@17/umd/react.development.js"
+            crossorigin
+        ></script>
+        <script
+            src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+            crossorigin
+        ></script>
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    </head>
+    <body>
+        <div id="root"></div>
+        <script type="text/babel">
+            //! Cách xài đi xài lại một component
+            // Tại đây, Form là một object có 2 giá trị
+            // Input() {} là cách tạo ra method (bản chất là hàm)
+            // có tên là Input
+            // *Return như bình thường để trả về ReactDOM
+            const Form = {
+                Input() {
+                    return <input />
+                },
+                Checkbox() {
+                    return <input type="checkbox" />
+                },
+            }
+            // Gọi method như dưới đây
+            function App() {
+                return (
+                    <div id="wrapper">
+                        <Form.Input />
+                        <Form.Checkbox />
+                    </div>
+                )
+            }
+            // Dứng dụng: tạo ra một biến Form, trong đó có rất nhiều
+            // ReactDOM con khác nhau giúp code dễ đọc và tiện lợi hơn
+            ReactDOM.render(<App />, document.getElementById("root"))
+        </script>
+    </body>
+</html>
